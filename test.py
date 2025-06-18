@@ -2,7 +2,7 @@ from orpheus_tts import OrpheusModel
 import wave
 import time
 
-model = OrpheusModel(model_name ="canopylabs/3b-es_it-ft-research_release", max_model_len=2048)
+model = OrpheusModel(model_name ="canopylabs/3b-es_it-ft-research_release")#, max_model_len=2048)
 prompt = '''Amico, è pazzesco come i social media abbiano, ehm, completamente cambiato il modo in cui interagiamo, vero? Siamo tutti connessi 24 ore su 24, 7 giorni su 7, eppure in qualche modo le persone si sentono più sole che mai. E non parliamo nemmeno di quanto stiano incasinando l'autostima e la salute mentale dei ragazzi e tutto il resto.'''
 
 start_time = time.monotonic()
