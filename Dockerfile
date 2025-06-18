@@ -13,15 +13,15 @@ RUN curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
     && sh ~/miniconda.sh -b -p /opt/conda \
     && rm ~/miniconda.sh
 
-COPY . app
+COPY app app
 
 RUN pip install orpheus-speech
-#RUN pip install vllm==0.7.3
+RUN pip install vllm==0.7.3
 
+#login 
 #RUN pip install huggingface_hub[hf_xet]
 ENV HF_HOME=/huggingface
 
-#ENV CURL_CA_BUNDLE=""
 
 #CMD ["python", "-u", "-W", "ignore", "app/app_sana.py", "--share", "--config=configs/sana_config/512ms/Sana_1600M_img512.yaml", "--model_path=hf://Efficient-Large-Model/Sana_1600M_512px/checkpoints/Sana_1600M_512px_MultiLing.pth"]
 #python -u -W ignore app/app_sana.py --share --config=configs/sana_config/512ms/Sana_1600M_img512.yaml --model_path=hf://Efficient-Large-Model/Sana_1600M_512px/checkpoints/Sana_1600M_512px_MultiLing.pth
