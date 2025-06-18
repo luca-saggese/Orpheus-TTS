@@ -13,7 +13,7 @@ RUN curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
     && sh ~/miniconda.sh -b -p /opt/conda \
     && rm ~/miniconda.sh
 
-COPY app app
+COPY . /app
 
 RUN pip install orpheus-speech
 RUN pip install vllm==0.7.3
