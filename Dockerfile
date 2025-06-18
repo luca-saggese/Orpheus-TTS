@@ -15,8 +15,8 @@ RUN curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -
 
 COPY . /app
 
-RUN pip install orpheus-speech
-RUN pip install vllm==0.7.3
+RUN pip install orpheus_tts_pypi
+#RUN pip install vllm==0.7.3
 
 #login 
 #RUN pip install huggingface_hub[hf_xet]
